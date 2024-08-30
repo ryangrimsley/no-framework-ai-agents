@@ -86,7 +86,7 @@ class BaseAgent:
                 else:
                     response = tool(tool_input)
 
-                print(colored(response, 'cyan'))
+                #print(colored(response, 'cyan'))
                 return
                 # return tool(tool_input)
 

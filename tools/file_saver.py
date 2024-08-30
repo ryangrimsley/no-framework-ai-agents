@@ -1,5 +1,8 @@
 import os
 
+GENERATED_RESPONSE_DIR_NAME = 'generated-responses'
+
+
 def save_to_file(content: str, file_name: str):
     """
     Save some content to a file when passing in the content and the name to name the file. 
@@ -10,8 +13,8 @@ def save_to_file(content: str, file_name: str):
     file_name(str): The name to name the file
     """
     file_name = f"{file_name}.txt"
-    root_path = os.path.dirname(os.path.dirname(file_name))
-    file_path = os.path.join(root_path, file_name)
+    root_path = os.path.dirname(os.path.dirname(__file__))
+    file_path = os.path.join(root_path, GENERATED_RESPONSE_DIR_NAME,file_name)
     try:
         with open(file_path, 'w') as file:
             file.write(content)

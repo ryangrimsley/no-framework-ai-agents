@@ -1,0 +1,1 @@
+This folder is not needed for many use cases, it is only to hold generated files from this example project. 
